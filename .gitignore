@@ -1,0 +1,7 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+Node/fizzbuzz/node_modules/
+Node/fizzbuzz/.idea
