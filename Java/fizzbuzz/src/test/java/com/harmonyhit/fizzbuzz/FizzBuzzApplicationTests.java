@@ -8,8 +8,7 @@ import java.time.LocalTime;
 
 @SpringBootTest
 class FizzBuzzApplicationTests {
-	private final CuckooClock cuckooClock = new CuckooClock();
-
+	private final CuckooClock clock = new CuckooClock();
 
 	@Test
 	void contextLoads() {
@@ -19,7 +18,7 @@ class FizzBuzzApplicationTests {
 	void testFizz() {
 		LocalTime time = LocalTime.of(1, 9);
 
-		String result = this.cuckooClock.cuckooClock(time);
+		String result = this.clock.clock(time);
 
 		Assertions.assertEquals("Fizz", result);
 	}
@@ -28,7 +27,7 @@ class FizzBuzzApplicationTests {
 	void testBuzz() {
 		LocalTime time = LocalTime.of(3, 10);
 
-		String result = this.cuckooClock.cuckooClock(time);
+		String result = this.clock.clock(time);
 
 		Assertions.assertEquals("Buzz", result);
 	}
@@ -37,7 +36,7 @@ class FizzBuzzApplicationTests {
 	void testFizzBuzz() {
 		LocalTime time = LocalTime.of(10, 30);
 
-		String result = this.cuckooClock.cuckooClock(time);
+		String result = this.clock.clock(time);
 
 		Assertions.assertEquals("Fizz Buzz", result);
 	}

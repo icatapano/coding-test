@@ -4,19 +4,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.LocalTime;
+import java.util.Objects;
 
 public class CuckooClock {
     private static final Logger LOGGER = LoggerFactory.getLogger(CuckooClock.class);
 
-    public String cuckooClock(LocalTime clock) {
+    public String clock(LocalTime time) {
         String chain = "";
-        chain = checkForFizz(clock.getMinute(), chain);
-        chain += checkForBuzz(clock.getMinute(), chain);
+        chain = checkForFizz(time.getMinute(), chain);
+        chain += checkForBuzz(time.getMinute(), chain);
         return chain;
     }
 
     private String addSpace(String str) {
-        if (str != "") {
+        if (!Objects.equals(str, "")) {
             str += " ";
         }
         return str;

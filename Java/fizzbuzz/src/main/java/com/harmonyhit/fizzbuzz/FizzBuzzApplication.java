@@ -21,6 +21,6 @@ public class FizzBuzzApplication implements CommandLineRunner {
 	public void run(String... args) {
 		LocalTime time = LocalTime.now();
 		LOGGER.info("Fizz Buzz Test");
-		this.clock.cuckooClock(time);
+		this.clock.clock(time);
 	}
 }
